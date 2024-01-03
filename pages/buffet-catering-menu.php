@@ -77,7 +77,7 @@ while ($row = $datas->fetch_assoc()) {
                 <div class="flex justify-end flex-auto">
                     <div class="flex rounded-md shadow-sm mr-4">
                         <form action="/pages/buffet-catering-menu.php" method="GET" class="flex w-full" id="fetch_form">
-                            <input id="food_search" name="food_search" placeholder="Search..." value="<?= isset($_GET['food_search']) ? $_GET['food_search'] : "" ?>" type="text" class="appearance-none px-3 py-2 w-full border border-gray-300 rounded-l-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                            <input id="food_search" name="food_search" placeholder="Search..." value="<?= isset($_GET['food_search']) ? htmlspecialchars($_GET['food_search']) : "" ?>" type="text" class="appearance-none px-3 py-2 w-full border border-gray-300 rounded-l-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
                             <span class="inline-flex items-center px-3 rounded-r-md border border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
                                 <select name="category" id="category" class="bg-gray-50 outline-none px-2">
                                     <option value="0" <?= isset($_GET['category']) && $_GET['category'] == "0" ? "selected" : "" ?>>All</option>
