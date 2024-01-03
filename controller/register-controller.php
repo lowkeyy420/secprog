@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']) && isset($
     $gender = isset($_POST['gender']) ? htmlspecialchars($_POST['gender']) : "";
     $password = isset($_POST['password']) ? htmlspecialchars($_POST['password']) : $username . $crunch_date;
     $conpass = isset($_POST['confirmpassword']) ? htmlspecialchars($_POST['confirmpassword']) : $password;
-    $role = isset($_POST['roles']) ? (int)$_POST['roles'] : 1;
+    $role = 1;
     $username_val = check_username($username, $conn);
     $email_val = check_email($email);
     $password_val = check_password($password, $conpass);
